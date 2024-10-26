@@ -12,7 +12,6 @@ The primary objective of this project is to predict Ethereum prices using histor
 - SARIMA (Seasonal ARIMA) statistical modeling
 - Optimised weight combination for ensemble predictions
 
-
 - Advanced Technical Indicators
 - Simple Moving Averages (7-day and 30-day)
 - Relative Strength Index (RSI)
@@ -406,16 +405,22 @@ Accuracy: 98.31288343558282%
 
 ```
 
-## Conclusion
-A Long Short-Term Memory (LSTM) model with Keras and TensorFlow is an appropriate choice for predicting Ethereum prices due to its ability to effectively model long-term dependencies and subtle patterns present in cryptocurrency data. The LSTM architecture, with its recurrent connections and gating mechanisms, can capture the intricate nuances and temporal relationships inherent in financial time series data.
-
-This project demonstrates the use of LSTM neural networks for predicting Ethereum prices based on historical data. It showcases the complete process of loading and preprocessing data, building and training an LSTM model and evaluating its performance using various metrics.
-
-LSTMs are particularly advantageous when dealing with long sequences of data, as they can selectively remember and forget information over extended periods, making them well-suited for tasks like cryptocurrency price prediction, where past price movements and market dynamics can influence future prices.
-
-By leveraging the power of deep learning frameworks like Keras and TensorFlow, the LSTM model can be efficiently trained on large datasets, allowing it to learn complex patterns and make accurate predictions on unseen data.
-
-While the performance of other models like SVR should also be evaluated, the LSTM approach with Keras and TensorFlow demonstrates promising results and aligns well with the characteristics of cryptocurrency price data, making it a strong candidate for this prediction task.
+## Note
+ Trend Alignment
+Actual vs. Predicted Trends: The blue line (actual Solana prices) should be closely followed by the ensemble prediction (green line) if the model performed well.
+Ensemble Model Performance: The ensemble line, combining LSTM and SARIMA, should ideally lie closer to the actual values than either the individual LSTM (purple) or SARIMA (red) predictions.
+2. RMSE Confidence Interval
+Confidence Band (Green Shaded Area): The green shaded area around the actual values represents the Root Mean Squared Error (RMSE) confidence interval. If your predictions are within this band, it indicates good predictive accuracy.
+Deviations: Significant deviations from this confidence band may suggest underfitting (model is too simplistic) or overfitting (model is too complex and lacks generalization).
+3. Individual Model Behaviors
+LSTM vs. SARIMA:
+LSTM (Purple Line): This model might capture non-linear, complex patterns in the data. It could show more variability and adaptability if Solana’s price has rapid fluctuations.
+SARIMA (Red Line): SARIMA often captures seasonal and trend components but may struggle with highly volatile changes. It could be smoother or less reactive to sudden spikes compared to LSTM.
+Performance Comparison: By examining how closely each model follows the actual trend individually, you can assess the strengths of each. Generally, LSTM is better for capturing volatile patterns, while SARIMA is good for consistent seasonal patterns.
+4. Ensemble Model Advantages
+Weighted Combination: If your ensemble model outperforms both individual models, you’ll see it tracking the actual trend better than the purple and red lines. This suggests that combining the strengths of both models has led to a more robust prediction.
+5. RMSE Score Interpretation
+The RMSE score displayed on the plot provides a measure of average prediction error. A lower RMSE value suggests higher prediction accuracy. If the ensemble RMSE is lower than the RMSEs for the individual models, it confirms that combining the models has improved prediction performance.
 
 ## References
 
