@@ -1,19 +1,25 @@
+
+
+---
+
 # Solana Price Prediction using XGBoost
 
 This project uses machine learning, specifically an XGBoost regressor, to predict the price of Solana (SOL) based on historical data and engineered features.
 
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Example](#example)
+5. [Results](#results)
+6. [Contributing](#contributing)
+7. [License](#license)
+
 ## Project Overview
-The primary objective of this project is to predict Solana prices using historical data. 
-This repository provides a framework for predicting the price of Solana, utilising time-series data and engineered features like lagged and rolling statistics. The model is trained with the XGBoost algorithm, known for its performance in regression tasks on structured datasets using a gradient boosting framework. The dataset consists of historical price data of Solana from April 2015 to October 2024 obtained from Coincodex.com  
 
-## What is Solana 
-* Solana is a decentralized computer network that uses a blockchain database to record transactions and manage the currency. The individual unit of Solana is called a sol.
-* Solana uses a proof-of-stake (PoS) mechanism and a proof-of-history (PoH) mechanism to improve on the traditional PoS blockchain. PoH uses hashed timestamps to verify when transactions occur.
-* Solana can power smart contracts, decentralized finance apps, NFTs, and more. It claims to be able to process 50,000 transactions per second.
-* Solana was created by Anatoly Yakovenko and Raj Gokal founded Solana Labs in 2018 and launched Solana in 2020.
+This repository provides a framework for predicting the price of Solana, utilizing time-series data and engineered features like lagged and rolling statistics. The model is trained with the XGBoost algorithm, known for its performance in regression tasks on structured datasets.
 
-
-## Setup Instructions
+## Installation
 
 Ensure you have Python 3.7+ and the following libraries installed:
 
@@ -21,20 +27,6 @@ Ensure you have Python 3.7+ and the following libraries installed:
 pip install numpy pandas matplotlib scikit-learn xgboost
 ```
 
-### Files
-
-- `main_xgboost copy.ipynb`: Jupyter notebook containing the main code for data preprocessing, model training, and evaluation.
-- `solana_2020-04-09_2024-10-28.csv`: Historical Solana price data used to train and test the model.
-
-
-## Running the Project
-
-1. **Clone the repository** or download the necessary files.
-   ```bash
-   git clone https://github.com/gappeah/Solana-ML-Forecast
-   ```
-
-2. **Prepare the dataset**: Ensure the `solana_2020-04-09_2024-10-26.csv` file is in the working directory.
 ## Usage
 
 ### 1. Load Data
@@ -136,7 +128,15 @@ plt.ylabel("SOL Price")
 plt.legend()
 plt.show()
 ```
-## References
-- [Matplotlib documentation](https://matplotlib.org/)
-- [Pandas documentation](https://pandas.pydata.org/)
-- [Numpy documentation](https://numpy.org/doc/stable/)
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Let me know if you'd like any adjustments to this outline or additional details in any section!
